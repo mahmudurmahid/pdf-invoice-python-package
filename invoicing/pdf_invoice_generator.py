@@ -36,7 +36,7 @@ def generate_invoice_pdf(invoice_path, pdf_path, image_path, product_id, product
                 pdf.cell(w=30, h=8, txt=columns[3], border=1)
                 pdf.cell(w=30, h=8, txt=columns[4], border=1, ln=1)
 
-        # Rows in the table
+                # Rows in the table
                 for index, row in df.iterrows():
                         pdf.set_font(family="Times", size=10)
                         pdf.set_text_color(80, 80, 80)
