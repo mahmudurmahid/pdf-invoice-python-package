@@ -62,4 +62,4 @@ def generate_invoice_pdf(invoice_path, pdf_path, image_path, product_id, product
         pdf.image(image_path, w=10)
 
 
-        pdf.output(f"PDFs/{filename}.pdf")
+        pdf.output(f"{pdf_path}/{filename}.pdf")
