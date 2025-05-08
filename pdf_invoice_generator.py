@@ -1,5 +1,6 @@
 import pandas as pd
 import glob
+import os
 from fpdf import FPDF
 from pathlib import Path
 
@@ -61,5 +62,5 @@ def generate_invoice_pdf(invoice_path, pdf_path, image_path, product_id, product
         pdf.cell(w=25, h=8, txt=f"PythonHow")
         pdf.image(image_path, w=10)
 
-
+        os.mkdir(pdf_path)
         pdf.output(f"{pdf_path}/{filename}.pdf")
